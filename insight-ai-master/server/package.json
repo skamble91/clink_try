@@ -1,0 +1,43 @@
+{
+  "name": "insight-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npx nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/server.js",
+    "query": "npm run build && node dist/query.js",
+    "fmp": "npm run build && node dist/dataIntake/fmp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparkerpearson/insight-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparkerpearson/insight-ai/issues"
+  },
+  "homepage": "https://github.com/jparkerpearson/insight-ai#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.1",
+    "@supercharge/promise-pool": "^2.4.0",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.15.0",
+    "mysql2": "^3.2.0",
+    "node-fetch": "^3.3.1",
+    "openai": "^3.2.1"
+  }
+}
